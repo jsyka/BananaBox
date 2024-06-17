@@ -1,0 +1,39 @@
+.home{
+    /* border: 2px solid; */
+    border-radius: 20px;
+    max-height: 91vh;
+    width: 70vw;
+    padding: 0 25px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjust the width as needed */
+    grid-auto-rows: 150px; /* Adjust the height as needed */
+    grid-auto-flow: row; /* Fill items by row first */
+    gap: 10px; /* Adjust the gap between items as needed */
+}
+
+li{
+    list-style-type: none;
+    padding: 0;
+}
+
+.board{
+    animation: fade-up 0.6s;
+}
+.currents-container{
+    position: absolute;
+    top: 42vh;
+    animation: fade-up 0.6s;
+}
+
+.pins-container{
+    position: absolute;
+    left: 56vw;
+    animation: fade-up 0.6s;
+}
+
+.profile-container{
+    position: absolute;
+    left: 75vw;
+    animation: fade-up 0.6s;
+}
