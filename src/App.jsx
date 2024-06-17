@@ -1,16 +1,17 @@
 import React from "react";
-import Menu from "./components/menu/Menu";
+// import Menu from "./components/menu/Menu";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import HomePg from "./pages/homePg/HomePg";
+// import HomePg from "./pages/homePg/HomePg";
 
 const App = () => {
   return (
     <div className="main">
       <div className="container">
-        <Menu />
+        {/* <Menu /> */}
         <Routes className="contents">
-          <Route path="/home" element={<HomePg />} />
+          hello world
+          {/* <Route path="/home" element={<HomePg />} /> */}
         </Routes>
       </div>
     </div>
