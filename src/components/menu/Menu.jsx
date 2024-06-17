@@ -2,6 +2,7 @@ import React from 'react'
 import './Menu.css'
 import { Link } from "react-router-dom";
 import { useState } from 'react';
+import logo from '../../assets/logo.png'
 
 
 const Menu = () => {
@@ -29,7 +30,7 @@ const Menu = () => {
 
   return (
     <div className='menu-container'>
-        <img src={''} className='logo'/>
+        <img src={logo} className='logo'/>
     <div className='menu'>
         {console.log('home:'+ homeIsClicked)}
         {console.log('list:'+ listIsClicked)}

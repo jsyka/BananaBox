@@ -5,14 +5,14 @@
 
   color-scheme: light dark;
   color: #809b5d;
-  background-color: #ffffec;
+  background-color: #f0ede4;
   /* background-image: url(./assets/gradientbg.png); */
   /* background-image: url(./assets/bananaAI.jpg); */
   /* background-image: radial-gradient(rgb(252, 230, 170), rgb(255, 255, 233)); */
   background-size: cover; 
   background-attachment: fixed; 
-  background-image: url(./assets/librarybg.jpg);
-
+  /* background-image: url(./assets/librarybg.jpg); */
+  background-image: -webkit-repeating-radial-gradient(rgb(148, 197, 213),#f0ede4);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

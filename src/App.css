@@ -17,3 +17,9 @@
 .contents {
   flex-grow: 1; /* Allow the contents to grow and take up remaining space */
 }
+
+.menu-container{
+  position: fixed;
+  left: 0;
+  top: 0;
+}

@@ -20,12 +20,10 @@
     /* background-color: #628036b2; */
     /* background-color: #2b6035c9; */
     /* background-image: linear-gradient(rgb(31, 95, 56), #7bac5272); */
-    background-image: linear-gradient(#fbf6e79c, #fbf6e79c);
     width: 33vw;
     height: 45vh;
     border-radius: 45px;
     align-items: center;
-    margin-top: 30px;
 
     display: flex;
     flex-direction: column;

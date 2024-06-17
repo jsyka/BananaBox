@@ -8,10 +8,10 @@ import Profile from '../../components/profile/Profile'
 const HomePg = () => {
   return (
     <div className='home'>
-      <Board/>
-      <Pins />
-      <Currents />
-      <Profile />
+      <Board className='widget'/>
+      <Currents className='widget'/>
+      <Pins className='widget'/>
+      <Profile className='widget'/>
     </div>
   )
 }

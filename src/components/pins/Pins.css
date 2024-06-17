@@ -10,7 +10,7 @@
     background-image: url(../../assets/notebook2.jpg);
     /* background-size: cover;  */
     background-attachment: fixed; 
-    border: solid 1px rgba(113, 93, 74, 0.696);
+    border: solid 1px rgba(113, 93, 74, 0.418);
     /* box-shadow: 3px 10px 10px 2px rgba(58, 89, 63, 0.282); */
 }
 
@@ -38,8 +38,8 @@
 }
 
 .edit-p{
-    background-color: #236239;;
-    color:#faf4db;
+    color: white;
+    background-color:#4c6d88;
     font-family: 'archivo';
     font-weight: 100;
     margin: 20px;
@@ -50,7 +50,7 @@
 
 .edit-p:hover{
     color:#236239;
-    background-color: #faf4db00;
+    background-color: #faf4db;
     border: 1px solid;
     /* border: none; */
 }

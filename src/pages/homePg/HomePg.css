@@ -1,39 +1,65 @@
-.home{
-    /* border: 2px solid; */
-    border-radius: 20px;
-    max-height: 91vh;
-    width: 70vw;
-    padding: 0 25px;
-
+.home {
+    position: absolute;
+    top: 0;
+    left: 300px;
+    right: 0;
+    bottom: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjust the width as needed */
-    grid-auto-rows: 150px; /* Adjust the height as needed */
-    grid-auto-flow: row; /* Fill items by row first */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 10px; /* Adjust the gap between items as needed */
-}
-
+    padding: 10px; /* Optional padding for the .home container */
+  }
+  
+.widget {
+    /* doesnt work.. */
+    position: relative;
+    margin: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-sizing: border-box; /* Ensures padding and border are included in the widget's size */
+    text-align: center;
+  }
+  
 li{
     list-style-type: none;
     padding: 0;
 }
 
 .board{
+    background-color: #fffae867;
+    border: 1px solid rgba(188, 219, 169, 0.716);
+    /* border: 10px solid; */
+    /* background-image: linear-gradient(rgba(31, 95, 56, 0.57),#7bac52); */
+    backdrop-filter: blur(10px);
+    position: absolute;
+    margin-top: 60px;
+    left: 60px;
     animation: fade-up 0.6s;
 }
 .currents-container{
+    background-color: #f0ede4;
+    border: 1px solid rgba(188, 219, 169, 0.374);
+   
     position: absolute;
-    top: 42vh;
+    top: 45vh;
+    left: 60px;
     animation: fade-up 0.6s;
 }
 
 .pins-container{
     position: absolute;
-    left: 56vw;
+    margin-top: 60px;
+    left: 38vw;
     animation: fade-up 0.6s;
 }
 
 .profile-container{
+
+    background-color: #dbc38b;
+    border: 1px solid rgba(188, 219, 169, 0.374);
     position: absolute;
-    left: 75vw;
+    margin-top: 60px;
+    left: 57vw;
     animation: fade-up 0.6s;
 }
