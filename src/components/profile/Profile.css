@@ -1,0 +1,35 @@
+.profile-container{
+    height: 82vh;
+    width: 18.3vw;
+    border-radius: 45px;
+    background-color: #faf4db1f;
+    border: 1px solid rgba(188, 219, 169, 0.374);
+    /* border: 10px solid; */
+    /* background-image: linear-gradient(rgba(31, 95, 56, 0.57),#7bac52); */
+    backdrop-filter: blur(10px);
+}
+
+.profile-heading{
+    margin-top: 50px;
+    color: #faf4db;
+    font-size: 30px;
+    font-family: archivo;
+    font-weight: 100;
+}
+
+.profile-icon{
+    margin-top: 40px;
+    width: 130px;
+    margin-bottom: 20px;
+}
+
+.username{
+   color: #faf4db; 
+   font-family: magilio;
+   font-size: 30px;
+}
+.achievements{
+    color:#faf4db; 
+    font-family: archivo;
+    font-weight: 100;
+}

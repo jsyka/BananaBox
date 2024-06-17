@@ -1,0 +1,56 @@
+/* SearchMovie.css */
+.movie-search {
+    position: relative;
+    width: 90%;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  
+  .movie-search .react-select__control {
+    margin-top: 20px;
+    background-color: rgb(255, 255, 255); /* Change background color */
+    border-radius: 35px; /* Add border radius */
+    padding-left: 40px; /* Adjust padding to make space for the icon */
+    border: 2px solid #ffffff; /* Add border */
+  }
+  
+  .movie-search .react-select__control--is-focused {
+    border-color: #aaa; /* Change border color when focused */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Add shadow */
+    color: rgb(10, 50, 16);
+  }
+  
+  .movie-search .react-select__option {
+    color: rgb(10, 50, 16);
+  }
+  
+  .movie-search .react-select__option--is-selected {
+    color: rgb(10, 50, 16);
+  }
+  
+  .movie-search .react-select__single-value {
+    color: rgb(10, 50, 16);
+  }
+  
+  .movie-search .react-select__input input {
+    color: rgb(10, 50, 16);  /* Ensure input text color is white */
+  }
+  
+  .movie-search .react-select__placeholder {
+    color: #dedcdc; /* Change placeholder color */
+  }
+  
+  .movie-search .react-select__menu {
+    border-radius: 0 0 25px 25px; /* Add border radius to menu */
+  }
+  
+  .movie-search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Prevent the icon from blocking input clicks */
+    font-size: 18px;
+    color: #aaa;
+  }
+  

@@ -1,0 +1,11 @@
+.movie-app{
+    height: 93vh;
+    color: #f4ebc2;
+    width: 33vw;
+    background-color: #faf4db1f;
+    border: 1px solid rgba(188, 219, 169, 0.374);
+    /* border: 10px solid; */
+    /* background-image: linear-gradient(rgba(31, 95, 56, 0.57),#7bac52); */
+    backdrop-filter: blur(10px);
+    border-radius: 45px;
+}
