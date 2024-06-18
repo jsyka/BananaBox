@@ -9,6 +9,10 @@
 .logo{
     width: 150px;
 }
+.logo:hover{
+    transform: rotate(-15deg);
+}
+
 
 .menu-container{
     /* background-color: #93bd7d; */
@@ -34,22 +38,31 @@
     list-style-type: none;
     padding: 0;
 }
+
+
 .icon{
     width: 15px;
     margin-right: 15px;
 }
+
+
 .links li {
     margin-bottom: 2vh;
 }
 
 .nav-text{
-    color:black;
+    color:#39251a;
     text-decoration: none;
     font-size: 15px;
     font-weight: 1;
 }
 .nav-text:hover{
-    color: bisque;
+    /* color: bisque; */
+    border: 1px solid #39251a;
+    padding: 10px;
+    border-radius:25px;
+    position: relative;
+    left: -10px;
 }
 
 .nav-clicked{
@@ -58,7 +71,9 @@
     font-size: 18px;
     font-weight: 1;
     padding: 5px 20px 5px 20px;
-    background-color: #eeebb1;
+    background-color: #d2d882;
     font-family: 'magilio';
-    border-radius: 30px;
+    border-radius: 25px;
+    position: relative;
+    left: -20px;
 }

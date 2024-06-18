@@ -1,0 +1,70 @@
+.greeting{
+    font-size: 80px;
+    color: white;
+    
+}
+
+.land {
+    border: 2px solid;
+    height: 100%;
+    position: absolute;
+    padding: 70px;
+    left: 300px;
+    top: 0px;
+    right: 0px;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-land{
+    width: 150px;
+    animation: fade-up 0.6s;
+}
+
+.info-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro{
+    width: 500px;
+    font-family: archivo;
+    color: white;
+    /* color:#4c6d88;; */
+    animation: fade-up 0.6s;
+}
+
+.feature-container {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Optional: Adds space between the features */
+    width: 100%; /* Ensure it takes the full width */
+    flex-wrap: wrap; /* Optional: Allows wrapping of features if there are many */
+    
+    animation: fade-up 0.6s;
+}
+
+.feature{
+    background-color: #f0ede4;
+    width: 200px;
+    height: 100px;
+    border-radius: 25px;
+    color: #39251a;
+    font-family: archivo;
+    font-weight: 100;
+    padding: 30px;
+    animation: fade-up 0.6s;
+}
+
+.begin{
+    margin-top: 30px;
+    background-color: #4c6d88;
+    border-radius: 40px;
+    padding: 20px;
+    width: 150px;
+    font-family: archivo;
+    animation: fade-up 0.6s;
+}

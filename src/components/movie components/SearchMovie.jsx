@@ -26,18 +26,19 @@ const SearchMovie = ({ onSearchChange }) => {
     setSearch(selectedOption);
     onSearchChange(selectedOption);
   };
+  
 
   return (
     <div className='movie-search'>
-      {/* <FaSearch className='movie-search-icon' /> */}
       <AsyncPaginate
         value={search}
         loadOptions={loadOptions}
         onChange={handleChange}
         debounceTimeout={600}
         placeholder="Search for a movie..."
-        classNamePrefix="react-select" // Add classNamePrefix for easier styling
+        classNamePrefix="react-select" 
       />
+      {console.log('hi')}
     </div>
   );
 };
