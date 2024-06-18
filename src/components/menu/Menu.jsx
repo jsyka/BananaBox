@@ -3,6 +3,16 @@ import "./Menu.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import logo from "../../assets/logo.png";
+import home from "../../assets/home.png";
+import homeG from "../../assets/home-green.png";
+import list from "../../assets/list.png";
+import listG from "../../assets/list-green.png";
+import track from "../../assets/tick.png";
+import trackG from "../../assets/tick-green.png";
+import search from "../../assets/search.png";
+import searchG from "../../assets/search-green.png";
+import settings from "../../assets/settings.png";
+import settingsG from "../../assets/settings-green.png";
 
 const Menu = () => {
   const [homeIsClicked, setHomeIsClicked] = useState(false);
@@ -50,13 +60,13 @@ const Menu = () => {
     setSettingsIsClicked(true);
   };
 
-  const removeHighlight =()=>{
+  const removeHighlight = () => {
     setHomeIsClicked(false);
     setListIsClicked(false);
     setProgressIsClicked(false);
     setDiscoverIsClicked(false);
     setSettingsIsClicked(false);
-  }
+  };
   return (
     <div className="menu-container">
       <Link to="/BananaBox" onClick={removeHighlight}>
@@ -68,46 +78,58 @@ const Menu = () => {
         {console.log("progress:" + progressIsClicked)}
         <ul className="links">
           <li>
-            <img src={""} className="icon" />
             <Link
               to="/home"
               className={homeIsClicked ? "nav-clicked" : "nav-text"}
               onClick={handleHomeClick}
             >
+              <img src={homeIsClicked ? homeG : home} className="icon" />
               Home
             </Link>
           </li>
           <li>
-            <img src={""} className="icon" />
             <Link
               to="/my-list"
               className={listIsClicked ? "nav-clicked" : "nav-text"}
               onClick={handleListClick}
             >
-              My List
+              <img src={listIsClicked ? listG : list} className="icon" /> My
+              List
             </Link>
           </li>
           <li>
-            <img src={""} className="icon" />
             <Link
               to="/my-progress"
               className={progressIsClicked ? "nav-clicked" : "nav-text"}
               onClick={handleProgressClick}
             >
+              <img src={progressIsClicked ? trackG : track} className="icon" />{" "}
               Track
             </Link>
           </li>
           <li>
-            <img src={""} className="icon" />
-            <Link to="/discover" className={discoverIsClicked ? "nav-clicked" : "nav-text"}
-            onClick={handleDiscoverClick}>
+            <Link
+              to="/discover"
+              className={discoverIsClicked ? "nav-clicked" : "nav-text"}
+              onClick={handleDiscoverClick}
+            >
+              <img
+                src={discoverIsClicked ? searchG : search}
+                className="icon"
+              />
               Discover
             </Link>
           </li>
           <li>
-            <img src={""} className="icon" />
-            <Link to="/settings" className={settingsIsClicked ? "nav-clicked" : "nav-text"}
-            onClick={handleSettingsClick}>
+            <Link
+              to="/settings"
+              className={settingsIsClicked ? "nav-clicked" : "nav-text"}
+              onClick={handleSettingsClick}
+            >
+              <img
+                src={settingsIsClicked ? settingsG : settings}
+                className="icon"
+              />
               Settings
             </Link>
           </li>
