@@ -68,3 +68,7 @@
     font-family: archivo;
     animation: fade-up 0.6s;
 }
+
+.symbol{
+    width: 50px;
+}

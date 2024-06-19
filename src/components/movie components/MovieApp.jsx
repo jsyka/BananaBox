@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import SearchMovie from "./SearchMovie";
 import MovieDetails from "./MovieDetails";
 import './MovieApp.css'
+
 const MovieApp = () => {
     const [movieDetails, setMovieDetails] = useState(null);
 
@@ -13,10 +14,24 @@ const MovieApp = () => {
         }
     };
 
+    const [movieList, setMovieList] = useState([]);
+    
+    const addMovieToList = (movieName) => {
+        if (!movieList.includes(movieName)){
+            setMovieList([...movieList, movieName]);
+            console.log("Updated list:", movieList);
+        }
+        else {
+            console.log("Already in list,:", movieList);
+        }
+    };
+
     return (
         <div className="movie-app">
             <SearchMovie onSearchChange={handleSearchChange} />
-            {movieDetails && <MovieDetails data={movieDetails} />}
+            {movieDetails && <MovieDetails data={movieDetails} addMovieToList={addMovieToList} />}
+            {console.log(movieList)}
+            <p>{movieList}</p>
         </div>
     );
 };
