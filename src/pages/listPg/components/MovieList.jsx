@@ -38,12 +38,12 @@ const MovieList = () => {
   }, [movieList]);
 
   return (
-    <div>
-      <h1>Movie List</h1>
-      <ul>
+    <div className="movie-page">
+      <h1 className="list-heading">Movie List</h1>
+      <ul className="movie-container">
         {detailedMovieList.map((movie, index) => (
-          <li key={index}>
-            <h4>{movie.name}</h4>
+          <li key={index} className="movie-item">
+            <h4 className="list-movie-title">{movie.name}</h4>
             {movie.details && (
               <>
                 <img className="list-poster" src={`https://image.tmdb.org/t/p/w500${movie.details.poster_path}`} alt={movie.details.title} />
