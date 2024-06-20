@@ -4,6 +4,10 @@ import MovieDetails from "./MovieDetails";
 import './MovieApp.css'
 
 const MovieApp = () => {
+
+    const savedMovieList = localStorage.getItem('movieList');
+    const [movieList, setMovieList] = useState(savedMovieList ? JSON.parse(savedMovieList) : []);
+
     const [movieDetails, setMovieDetails] = useState(null);
 
     const handleSearchChange = async (selectedOption) => {
@@ -14,15 +18,14 @@ const MovieApp = () => {
         }
     };
 
-    const [movieList, setMovieList] = useState([]);
-    
     const addMovieToList = (movieName) => {
-        if (!movieList.includes(movieName)){
-            setMovieList([...movieList, movieName]);
-            console.log("Updated list:", movieList);
-        }
-        else {
-            console.log("Already in list,:", movieList);
+        if (!movieList.includes(movieName)) {
+            const newList = [...movieList, movieName];
+            setMovieList(newList);
+            localStorage.setItem('movieList', JSON.stringify(newList)); // Save to local storage
+            console.log("Updated list:", newList); // Log the updated list
+        } else {
+            console.log("Already in list:", movieName); // Log if the movie is already in the list
         }
     };
 
@@ -31,7 +34,7 @@ const MovieApp = () => {
             <SearchMovie onSearchChange={handleSearchChange} />
             {movieDetails && <MovieDetails data={movieDetails} addMovieToList={addMovieToList} />}
             {console.log(movieList)}
-            <p>{movieList}</p>
+            {/* <p>{movieList}</p> */}
         </div>
     );
 };
