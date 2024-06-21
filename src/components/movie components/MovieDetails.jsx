@@ -1,10 +1,14 @@
 import React from "react";
 import "./MovieDetails.css";
+import { useState } from "react";
 
 const MovieDetails = ({ data, addMovieToList }) => {
 
+    const [addListStatus, setAddListStatus] = useState(false);
+
     const handleAddMovieToList = () => {
         addMovieToList(data.title);
+        setAddListStatus(!addListStatus);
     };
 
     return (
@@ -22,7 +26,9 @@ const MovieDetails = ({ data, addMovieToList }) => {
                 <p>Genres: {data.genres.map((genre) => genre.name).join(", ")}</p>
             </div>
             <div className="actions">
-                <button className="actionbutton" onClick={handleAddMovieToList}>Add to list</button>
+                {addListStatus?
+                <button className="actionbutton"onClick={handleAddMovieToList}>Add to list</button>
+            : <button className="added2list" onClick={handleAddMovieToList}>Added!</button>}
                 <button className="actionbutton">Watched</button>
                 <button className="actionbutton">Rate</button>
             </div>

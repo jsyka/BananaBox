@@ -68,6 +68,11 @@ button:focus-visible {
   font-family: 'magilio';
   src: url(./assets/fonts/magilio.ttf);
 }
+@font-face {
+  font-family: 'inter';
+  src: url(./assets/fonts/inter.ttf);
+}
+
 
 h1{
   font-family: magilio;

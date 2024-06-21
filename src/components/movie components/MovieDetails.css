@@ -63,3 +63,25 @@
     top: 70vh;
     left: 4vw;
 }
+
+.added2list{
+    background-color: #668656;
+    color:white;
+    font-family: 'archivo';
+    font-weight: 100;
+    margin: 20px;
+    border-radius: 45px;
+    border: none;
+    font-size: 1vw;
+}
+
+.added2list:hover{
+    background-color: #668656;
+    color:white;
+    font-family: 'archivo';
+    font-weight: 100;
+    margin: 20px;
+    border-radius: 45px;
+    border: none;
+    font-size: 1vw;
+}
