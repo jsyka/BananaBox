@@ -27,7 +27,7 @@ const MovieDetails = ({ data, addMovieToList }) => {
             </div>
             <div className="actions">
                 {addListStatus?
-                <button className="actionbutton"onClick={handleAddMovieToList}>Add to list</button>
+                <button className="actionbutton"onClick={handleAddMovieToList}>bookmark</button>
             : <button className="added2list" onClick={handleAddMovieToList}>Added!</button>}
                 <button className="actionbutton">Watched</button>
                 <button className="actionbutton">Rate</button>

@@ -39,7 +39,7 @@ const MovieList = () => {
 
   return (
     <div className="movie-page">
-      <h1 className="list-heading">movie list</h1>
+      <h2 className="list-heading">movies I want to watch:</h2>
       <ul className="movie-container">
         {detailedMovieList.map((movie, index) => (
           <li key={index} className="movie-item">

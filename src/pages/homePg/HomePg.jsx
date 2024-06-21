@@ -6,6 +6,8 @@ import Pins from '../../components/pins/Pins'
 import Profile from '../../components/profile/Profile'
 
 const HomePg = () => {
+
+  
   return (
     <div className='home'>
       <Board className='widget'/>
