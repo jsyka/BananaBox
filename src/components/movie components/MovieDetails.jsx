@@ -19,11 +19,13 @@ const MovieDetails = ({ data, addMovieToList }) => {
                 src={`https://image.tmdb.org/t/p/w500${data.poster_path}`}
                 alt={data.title}
             />
+            {console.log(data)}
             <div className="info">
                 <p>{data.overview}</p>
                 <p>Release Date: {data.release_date}</p>
                 <p>Rating: {data.vote_average}</p>
                 <p>Genres: {data.genres.map((genre) => genre.name).join(", ")}</p>
+                <p>Runtime: {data.runtime} mins</p>
             </div>
             <div className="actions">
                 {addListStatus?

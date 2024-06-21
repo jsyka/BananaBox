@@ -51,15 +51,15 @@ li{
     position: absolute;
     margin-top: 60px;
     left: 38vw;
-    animation: fade-up 0.6s;
+
 }
 
 .profile-container{
-
     background-color: #dbc38b;
     border: 1px solid rgba(188, 219, 169, 0.374);
     position: absolute;
     margin-top: 60px;
     left: 57vw;
     animation: fade-up 0.6s;
+    z-index: 1;
 }

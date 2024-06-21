@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import './MovieList.css';
+import './PinsMovieList.css';
 
-const MovieList = () => {
+const PinsList = ({ onPinSelect }) => {
   const [movieList, setMovieList] = useState([]);
   const [detailedMovieList, setDetailedMovieList] = useState([]);
+  const [selectedMovie2pin, setSelectedMovie2pin] = useState(null);
 
   useEffect(() => {
     const savedList = localStorage.getItem("movieList");
@@ -37,25 +38,42 @@ const MovieList = () => {
     }
   }, [movieList]);
 
+  const handlePinSelect = (selectedMovie) => {
+    setSelectedMovie2pin(selectedMovie);
+    console.log("Selected movie to pin:", selectedMovie);
+  }
+
+  const savePin = () => {
+    if (selectedMovie2pin) {
+      localStorage.setItem("pinned", JSON.stringify(selectedMovie2pin));
+      console.log("Saved pin:", selectedMovie2pin);
+      onPinSelect(selectedMovie2pin); // Inform parent component about the pinned movie
+    }
+  }
+
   return (
-    <div className="movie-page">
-      {/* <h2 className="list-heading">movies I want to watch:</h2> */}
-      <ul className="movie-container">
+    <div className="pins-editing-window">
+      <ul className="p-e-container">
         {detailedMovieList.map((movie, index) => (
-          <li key={index} className="movie-item">
-            <h4 className="list-movie-title">{movie.name}</h4>
+          <li key={index}>
             {movie.details && (
               <>
-                <img className="list-poster" src={`https://image.tmdb.org/t/p/w500${movie.details.poster_path}`} alt={movie.details.title} />
-                {/* <span>Rating: {movie.details.vote_average}</span>
-                <p>{movie.details.overview}</p> */}
+                <img
+                  onClick={() => handlePinSelect(movie)}
+                  src={`https://image.tmdb.org/t/p/w500${movie.details.poster_path}`}
+                  className={selectedMovie2pin === movie ? "poster-selected" : "list-poster2"}
+                  alt={movie.details.title}
+                />
               </>
             )}
           </li>
         ))}
       </ul>
+      <button className="edit-p" onClick={savePin}>
+        Save
+      </button>
     </div>
   );
 };
 
-export default MovieList;
+export default PinsList;

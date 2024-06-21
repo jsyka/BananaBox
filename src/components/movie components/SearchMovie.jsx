@@ -20,6 +20,7 @@ const SearchMovie = ({ onSearchChange }) => {
         label: movie.title,
       })),
     };
+    
   };
 
   const handleChange = (selectedOption) => {
@@ -38,7 +39,8 @@ const SearchMovie = ({ onSearchChange }) => {
         placeholder="Search for a movie..."
         classNamePrefix="react-select" 
       />
-      {console.log('hi')}
+      {/* {console.log('hi')}
+      {console.log(search)} */}
     </div>
   );
 };

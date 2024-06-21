@@ -1,75 +1,67 @@
-.menu{
+.menu {
     padding: 40px 25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: left;
-    box-sizing: border-box
-}
-
-.logo{
+    box-sizing: border-box;
+  }
+  
+  .logo {
     width: 150px;
-}
-.logo:hover{
+  }
+  
+  .logo:hover {
     transform: rotate(-15deg);
-}
-
-
-.menu-container{
-    /* background-color: #93bd7d; */
-    background-color:#f0ede4;
-    /* background-color: #cea044; */
+  }
+  
+  .menu-container {
+    background-color: #f0ede4;
     width: 300px;
     height: 100%;
-    /* border-radius: 40px; */
     align-items: center;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     font-family: 'archivo';
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.382);
-
-    /* box-shadow: 10px -2px 10px 2px rgba(58, 89, 63, 0.282); */
-}
-
-.links {
+  }
+  
+  .links {
     list-style-type: none;
     padding: 0;
-}
-
-
-.icon{
+  }
+  
+  .icon {
     width: 15px;
     margin-right: 10px;
-}
-
-
-.links li {
+  }
+  
+  .links li {
     margin-bottom: 20px;
-    /* box-sizing: border-box */
-}
-
-.nav-text{
-    color:#39251a;
+  }
+  
+  .nav-text {
+    color: #39251a;
     text-decoration: none;
     font-size: 15px;
     font-weight: 1;
-    
-}
-.nav-text:hover{
-    /* color: bisque; */
-    border: 1px solid #39251a;
     padding: 10px;
-    border-radius:25px;
-    position: relative;
-    left: -10px;
-    
-}
-
-.nav-clicked{
+    border-radius: 25px;
+    transition: background-color 0.3s, border 0.3s, color 0.3s;
+    display: flex;
+    align-items: center; /* Ensure the icon and text are aligned */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  
+  .nav-text:hover {
+    border: 1px solid #39251a;
+    background-color: #e6e2d3;
+    color: #39251a;
+  }
+  
+  .nav-clicked {
     text-decoration: none;
     color: #617f36;
     font-size: 20px;
@@ -78,8 +70,8 @@
     background-color: #d2d882;
     font-family: 'magilio';
     border-radius: 25px;
-    position: relative;
-    left: -20px;
-    animation: fade-up 0.3s;
-}
-
+    display: flex;
+    align-items: center;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  
