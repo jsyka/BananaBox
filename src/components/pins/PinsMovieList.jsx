@@ -4,7 +4,7 @@ import './PinsMovieList.css';
 const PinsList = ({ onPinSelect }) => {
   const [movieList, setMovieList] = useState([]);
   const [detailedMovieList, setDetailedMovieList] = useState([]);
-  const [selectedMovie2pin, setSelectedMovie2pin] = useState(null);
+  const [selectedMovies2pin, setSelectedMovies2pin] = useState([]);
 
   useEffect(() => {
     const savedList = localStorage.getItem("movieList");
@@ -39,15 +39,26 @@ const PinsList = ({ onPinSelect }) => {
   }, [movieList]);
 
   const handlePinSelect = (selectedMovie) => {
-    setSelectedMovie2pin(selectedMovie);
-    console.log("Selected movie to pin:", selectedMovie);
+    setSelectedMovies2pin(prevSelectedMovies => {
+      if (prevSelectedMovies.includes(selectedMovie)) {
+        // Deselect the movie if it's already selected
+        return prevSelectedMovies.filter(movie => movie !== selectedMovie);
+      } else if (prevSelectedMovies.length < 2) {
+        // Select the movie if less than 2 movies are selected
+        return [...prevSelectedMovies, selectedMovie];
+      } else {
+        // Replace the first selected movie if already 2 are selected
+        return [prevSelectedMovies[1], selectedMovie];
+      }
+    });
+    console.log("Selected movies to pin:", selectedMovies2pin);
   }
 
   const savePin = () => {
-    if (selectedMovie2pin) {
-      localStorage.setItem("pinned", JSON.stringify(selectedMovie2pin));
-      console.log("Saved pin:", selectedMovie2pin);
-      onPinSelect(selectedMovie2pin); // Inform parent component about the pinned movie
+    if (selectedMovies2pin.length > 0) {
+      localStorage.setItem("pinned", JSON.stringify(selectedMovies2pin));
+      console.log("Saved pins:", selectedMovies2pin);
+      onPinSelect(selectedMovies2pin); // Inform parent component about the pinned movies
     }
   }
 
@@ -61,7 +72,7 @@ const PinsList = ({ onPinSelect }) => {
                 <img
                   onClick={() => handlePinSelect(movie)}
                   src={`https://image.tmdb.org/t/p/w500${movie.details.poster_path}`}
-                  className={selectedMovie2pin === movie ? "poster-selected" : "list-poster2"}
+                  className={selectedMovies2pin.includes(movie) ? "poster-selected" : "list-poster2"}
                   alt={movie.details.title}
                 />
               </>
