@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const MovieDetails = ({ data, addMovieToList }) => {
 
-    const [addListStatus, setAddListStatus] = useState(false);
+    const [addListStatus, setAddListStatus] = useState(true);
 
     const handleAddMovieToList = () => {
         addMovieToList(data.title);
