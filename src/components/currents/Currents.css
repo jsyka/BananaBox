@@ -3,7 +3,7 @@
     font-family: magilio;
     font-size: 2.3vw;
     margin-top:30px;
-    color: #39251a;
+    color: #f5f5f5;
 }
 
 .content-title{
@@ -17,9 +17,7 @@
 .currents-container{
     backdrop-filter: blur(10px);
     color: #faf4db;
-    /* background-color: #628036b2; */
-    /* background-color: #2b6035c9; */
-    /* background-image: linear-gradient(rgb(31, 95, 56), #7bac5272); */
+    background-image: linear-gradient(#ec5220, rgb(250, 164, 52));
     width: 33vw;
     height: 45vh;
     border-radius: 45px;
@@ -37,13 +35,13 @@
 
 .currents{
     align-items: left;
-    color: #39251a;
+    color: #f5f5f5;
 }
 
 .bar-container{
     height: 20px;
     position: relative;
-    border: 2px solid #39251a;
+    border: 2px solid #ffe485;
     border-radius: 30px;
     width: 350px;
 }
@@ -51,7 +49,7 @@
 .bar-container .progress-bar{
     position: absolute;
     height: 100%;
-    background-color: #39251a;
+    background-color: #ffe485;
     /* background-color: #ffeb86; */
     width: 0;
     animation: progress-animation 4s forwards;
@@ -61,7 +59,7 @@
 .bar-container .progress-bar-show{
     position: absolute;
     height: 100%;
-    background-color: #39251a;
+    background-color: #ffe485;
     width: 0;
     animation: progress-animation 4s forwards;
     border-radius: 30px;

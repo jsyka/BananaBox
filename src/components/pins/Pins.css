@@ -39,7 +39,7 @@
 
 .edit-p{
     color: white;
-    background-color:#4c6d88;
+    background-color:#59381b;
     font-family: 'archivo';
     font-weight: 100;
     margin: 20px;
@@ -51,8 +51,7 @@
 }
 
 .edit-p:hover{
-    color:#236239;
-    background-color: #faf4db;
-    border: 1px solid;
-    /* border: none; */
+    background-color: #f5f5f5;
+    background-color: #ffe485;
+    color:#59381b;
 }

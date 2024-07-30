@@ -1,5 +1,5 @@
 import React from "react";
-import "./LandingPg.css";
+import "./LandingPg-v2.css";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import search from "../../assets/search.png";

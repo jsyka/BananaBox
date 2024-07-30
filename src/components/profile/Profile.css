@@ -2,6 +2,7 @@
     height: 82vh;
     width: 18.3vw;
     border-radius: 45px;
+    background-image: linear-gradient(#ec5220, rgb(250, 164, 52));
     /* border: 10px solid; */
     /* background-image: linear-gradient(rgba(31, 95, 56, 0.57),#7bac52); */
     backdrop-filter: blur(10px);
@@ -17,21 +18,21 @@
 
 .profile-heading{
     margin-top: 50px;
-    color: #faf4db;
+    color:  #f5f5f5;
     font-size: 30px;
     font-family: archivo;
     font-weight: 100;
 }
 
 input{
-    color: #faf4db;
+    color: #f5f5f5;
     background-color: #faf4db00;
     font-family: magilio;
    font-size: 30px;
     width: 16vw;
     text-align: center;
     border-radius: 45px;
-    border: 2px solid #f9f4da;
+    border: 2px solid  #f5f5f5;
 }
 
 
@@ -42,22 +43,22 @@ input{
 }
 
 .username{
-   color: #faf4db; 
+   color:  #f5f5f5; 
    font-family: magilio;
    font-size: 30px;
 }
 .achievements{
-    color:#faf4db; 
+    color: #f5f5f5; 
     font-family: archivo;
     font-weight: 100;
 }
 
 .profile-button{
-    background-color: #f9f4da;
-    color:#dbc38b;
+    background-color: #f5f5f5;
+    background-color: #ffe485;
+    color:#59381b;
 }
 .profile-button:hover{
-    background-color: #dbc38b;
-    color:#f9f4da;
-    border: 1px solid #f9f4da;
+    background-color: white;
+    color: #59381b;
 }

@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import './TrackPg.css'
+
 
 const TrackPg = () => {
   const [movieList, setMovieList] = useState([]);
@@ -13,7 +15,7 @@ const TrackPg = () => {
   const numberOfMovies = movieList.length;
 
   return (
-    <div>
+    <div className='track-pg'>
       <h1>Number of movies: {numberOfMovies}</h1>
     </div>
   )
