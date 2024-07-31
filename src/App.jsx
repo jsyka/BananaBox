@@ -7,6 +7,7 @@ import DiscoverPg from "./pages/discoverPg/DiscoverPg";
 import LandingPg from "./pages/landingPg/LandingPg";
 import ListPg from "./pages/listPg/ListPg";
 import TrackPg from "./pages/trackPg/TrackPg";
+import SettingsPg from "./pages/settingsPg/SettingsPg";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="/my-list" element={<ListPg/>}/>
           <Route path='/my-progress' element={<TrackPg />}/>
           <Route path="/discover" element={<DiscoverPg />} />
+          <Route path="/settings" element={<SettingsPg/>}/>
         </Routes>
       </div>
     </div>

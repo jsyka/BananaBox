@@ -1,6 +1,7 @@
 import React from "react";
 import "./MovieDetails.css";
 import { useState } from "react";
+import RatingComponent from "../rating/RatingComponent";
 
 const MovieDetails = ({ data, addMovieToList }) => {
 
@@ -34,6 +35,7 @@ const MovieDetails = ({ data, addMovieToList }) => {
                 <button className="actionbutton">Watched</button>
                 <button className="actionbutton">Rate</button>
             </div>
+            <RatingComponent/>
         </div>
     );
 };
