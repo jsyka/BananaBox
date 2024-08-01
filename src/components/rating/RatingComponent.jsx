@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import star from '../../assets/star.png';
 import starnull from '../../assets/star-null.png';
 import './RatingComponent.css';
+import banana from '../../assets/bananatrue.png';
+import banananull from '../../assets/banananull.png';
 
 const RatingComponent = ({movieId}) => {
   const [rating, setRating] = useState(4);
@@ -36,7 +38,7 @@ const RatingComponent = ({movieId}) => {
           <img
             key={starNumber}
             onClick={() => handleRating(starNumber)}
-            src={rating >= starNumber ? star : starnull}
+            src={rating >= starNumber ? banana : banananull}
             alt={`star ${starNumber}`}
             style={{ cursor: isEditingRating ? 'pointer' : 'default' }}
           />

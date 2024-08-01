@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 import "./MovieList.css";
 import star from '../../../assets/star.png'
 import starnull from '../../../assets/star-null.png'
+import banana from '../../../assets/bananatrue.png';
+import banananull from '../../../assets/banananull.png'
+
+
 
 const MovieList = () => {
   const [movieList, setMovieList] = useState([]);
@@ -68,11 +72,11 @@ const MovieList = () => {
                 />
                 {/* <p className="movielistrating">Rating: {movie.rating}/5 </p> */}
                   <div className="movielistrating">
-                    <img src={movie.rating>=1? star: starnull}/>
-                    <img src={movie.rating>=2? star: starnull}/>
-                    <img src={movie.rating>=3? star: starnull}/>
-                    <img src={movie.rating>=4? star: starnull}/>
-                    <img src={movie.rating>=5? star: starnull}/>
+                    <img src={movie.rating>=1? banana: banananull}/>
+                    <img src={movie.rating>=2? banana: banananull}/>
+                    <img src={movie.rating>=3? banana: banananull}/>
+                    <img src={movie.rating>=4? banana: banananull}/>
+                    <img src={movie.rating>=5? banana: banananull}/>
                   </div>
               </>
             )}
