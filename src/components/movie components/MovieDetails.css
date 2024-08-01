@@ -92,3 +92,43 @@
     border-radius: 45px;
     font-size: 1vw;
 }
+.movieactions{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.movie-poster{
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+}
+
+
+.movieposter{
+    width: 250px;
+    height: auto;
+    object-fit: cover;
+}
+.moviedetails{
+    /* border: 2px solid; */
+    display: flex;
+    position: relative;
+    padding:  10px 40px;
+    
+}
+.movieinfo{
+    margin-left: 20px;
+    font-size: 12px;
+}
+.movieinfo p{
+    text-align: left;
+}
+.overview{
+    border: 2px solid;
+    border-radius: 10px;
+    height: 150px;
+    overflow: scroll;
+    text-align: left;
+    align-items: left;
+    padding: 20px
+}

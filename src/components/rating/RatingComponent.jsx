@@ -1,16 +1,28 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import star from '../../assets/star.png';
 import starnull from '../../assets/star-null.png';
 import './RatingComponent.css';
 
-const RatingComponent = () => {
+const RatingComponent = ({movieId}) => {
   const [rating, setRating] = useState(4);
   const [isEditingRating, setIsEditingRating] = useState(false);
+
+  useEffect(()=>{
+    const savedRating = localStorage.getItem(`rating-${movieId}`);
+    if (savedRating) {
+      setRating(parseInt(savedRating));
+    }
+    else {
+      setRating(0);
+    }
+  }, [movieId])
 
   const handleRating = (givenRating) => {
     if (isEditingRating) {
       setRating(givenRating);
+      localStorage.setItem(`rating-${movieId}`, givenRating);
     }
+  
   };
 
   const handleEditRating = () => {
@@ -31,7 +43,7 @@ const RatingComponent = () => {
         ))}
       </div>
       <button onClick={handleEditRating}>
-        {isEditingRating ? 'Save Rating' : 'Modify Rating'}
+        {isEditingRating ? 'save' : 'rate'}
       </button>
     </div>
   );
