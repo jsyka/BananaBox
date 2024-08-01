@@ -58,7 +58,7 @@ const MovieList = () => {
 
   return (
     <div className="movie-page">
-      {/* <h2 className="list-heading">movies I want to watch:</h2> */}
+      <h3 className="list-heading">movies I've watched:</h3>
       <ul className="movie-container">
         {detailedMovieList.map((movie, index) => (
           <li key={index} className="movie-item">
@@ -70,7 +70,7 @@ const MovieList = () => {
                   src={`https://image.tmdb.org/t/p/w500${movie.details.poster_path}`}
                   alt={movie.details.title}
                 />
-                {/* <p className="movielistrating">Rating: {movie.rating}/5 </p> */}
+              
                   <div className="movielistrating">
                     <img src={movie.rating>=1? banana: banananull}/>
                     <img src={movie.rating>=2? banana: banananull}/>
